@@ -22,7 +22,6 @@ export const api = createTRPCNext<AppRouter>({
   config() {
     return {
       /**
-       * Transformer used for data de-serialization from the server.
        *
        * @see https://trpc.io/docs/data-transformers
        */
@@ -60,9 +59,5 @@ export const api = createTRPCNext<AppRouter>({
  */
 export type RouterInputs = inferRouterInputs<AppRouter>;
 
-/**
- * Inference helper for outputs.
- *
- * @example type HelloOutput = RouterOutputs['example']['hello']
- */
+
 export type RouterOutputs = inferRouterOutputs<AppRouter>;
